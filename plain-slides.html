@@ -1,40 +1,44 @@
 <section>
-    <h2>GRASS GIS temporal framework (TGRASS)</h2>
+    <h2>Headings</h2>
+    <h3>Heading level 3</h3>
     <ul>
-        <li>time series of
-            <ul>
-                <li>vector</li>
-                <li>raster</li>
-                <li>3D raster</li>
-            </ul>
+        <li>Any headings can be used but it is a good practice to use the heading hierarchically.</li>
+        <li>The level of heading is for semantic.</li>
+        <li>The size should be modified using the style attribute or by changing CSS for all.</li>
+    </ul>
+    <h4>Heading level 4</h4>
+    <ul>
+        <li>Different headings should be placed in the order without skipping.</li>
+    </ul>
+    <h4>Heading level 4</h4>
+    <ul>
+        <li>
+            It seems that a good practice is <code>h2</code> heading for slide/section headings
+            <code>h1</code> or <code>h2</code> for presentation title and <code>h3</code>
+            for subtitles.
         </li>
-        <li>management (metadata, file management, ...)</li>
-        <li>analysis (aggregation, batch operations, extraction, queries, ...)</li>
-        <li>support for creation of the visualization tools</li>
     </ul>
 </section>
 <section>
-    <h2>Summary</h2>
+    <h2>Lists</h2>
     <ul>
-        <li>GRASS GIS Animation tool
-            <ul>
-                <li>integrated to GRASS GIS and with temporal framework</li>
-                <li>complex data, a lot of possibilities
+        <li>bullet (unordered) list are done by <code>ul</code></li>
+        <li>numbered (ordered) list are done by <code>ol</code></li>
+        <li>nested lists
+            <ol>
+                <li>nested list font size is smaller</li>
+                <li>works the same for bullet and numbered lists</li>
+                <li>you should pay attention to nesting elements
                     <ul>
-                        <li>integrated to GRASS GIS and with temporal framework</li>
-                        <li>complex data, a lot of possibilities</li>
+                        <li>nested list must be inside <code>li</code> element</li>
+                        <li>if the HTML is not valid the styles will not work</li>
                     </ul>
                 </li>
-            </ul>
+            </ol>
         </li>
-        <li>Web applications for animations</li>
-        <li>Web applications for general data</li>
-        <li>Specialized web application for vector field</li>
-        <li>Web applications based on principle of export tools for&nbsp;online&nbsp;viewers
-            <ul>
-                <li><a href="http://geospatial.ncsu.edu/osgeorel">http://geospatial.ncsu.edu/osgeorel</a></li>
-                <li><a href="http://geospatial.ncsu.edu/osgeorel">http://geospatial.ncsu.edu/osgeorel</a></li>
-            </ul>
+        <li>
+            description lists and their elements (<code>dl</code>, <code>dt</code>, <code>dd</code>)
+            do not have any special handing
         </li>
     </ul>
 </section>
@@ -44,7 +48,19 @@
         width="542" height="450px" seamless class="top">
     </iframe>
     <ul>
-        <li>online</li>
-        <li>offline</li>
+        <li>
+            online pages to avoid screenshots or switching to different window to show a web page
+            <ul>
+                <li>mind the risk of not having internet access</li>
+                <li>
+                    by controlling the embedded web page you loose control over the slides
+                    <ul>
+                        <li>you need to click to the slide to associate keyboard with slides again</li>
+                        <li>you may consider enabling the control arrows (<code>controls</code>) for Reveal.js</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>offline pages for embedding some HTML document which we don't want to integrate</li>
     </ul>
 </section>

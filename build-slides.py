@@ -28,7 +28,7 @@ def silent_rmtree(filename):
         if e.errno != errno.ENOENT:
             raise
 
-generated_file_info = "<!-- This is a generated file. Do not edit. -->"
+generated_file_info = "<!-- This is a generated file. Do not edit. -->\n"
 
 def error_message(*objs):
     print("ERROR: ", *objs, file=sys.stderr)
@@ -77,6 +77,10 @@ def main():
                     if title:
                         line = re.sub(r"<title>.*</title>", "<title>" + title + "</title>", line)
                     outfile.write(line)
+                    # just to be sure place the comment after doctype and html element
+                    # perhaps not needed since we anyway expect HTML5 aware browsers
+                    if re.match(r"\s*<html.*>\s*", line):
+                        outfile.write(generated_file_info)
         for fname in files:
             with open(fname) as infile:
                 for line in infile:
