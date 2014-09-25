@@ -1,134 +1,107 @@
 <section class="textimg">
-    <h2>Possible layouts in the template</h2>
+    <h2>Possible layouts in the left-right template</h2>
     <ul>
         <li>text on left, image on right</li>
         <li>image on right, text on left</li>
         <li>text can be:
             <ul>
-                <li>p</li>
-                <li>ul</li>
-                <li>ol</li>
+                <li><code>p</code></li>
+                <li><code>ul</code></li>
+                <li><code>ol</code></li>
             </ul>
         </li>
         <li>image can be:
             <ul>
-                <li>img</li>
-                <li>video</li>
+                <li><code>img</code></li>
+                <li><code>video</code></li>
+                <li><code>iframe</code>
+                    <ul>
+                        <li>Vimeo video</li>
+                        <li>YouTube video</li>
+                        <li>any web page</li>
+                    </ul>
+                </li>
             </ul>
         </li>
     </ul>
     <img src="img/tangible.png">
 </section>
 <section class="imgtext">
-    <h2>Data types</h2>
+    <h2>Applying left-right layout</h2>
     <ul>
-        <li>a lot of spatio-temporal visualization tools focused on vector data or some particular type of temporal data</li>
-        <li>using different tools for different data is inconvenient</li>
-        <li>GRASS GIS supports:
+        <li>set <code>section</code> element class to:
             <ul>
-                <li>vector</li>
-                <li>raster</li>
-                <li>3D raster</li>
-                <li>time series</li>
+                <li><code>imgtext</code> for image on left</li>
+                <li><code>textimg</code> for image on right</li>
             </ul>
+        </li>
+        <li>example of setting a class:
+            <pre>&lt;section class="imgtext"&gt;</pre>
         </li>
     </ul>
     <img src="img/tangible.png">
 </section>
 <section class="imgtext">
-    <h2>Data types</h2>
+    <h2>Details about left-right template</h2>
     <ul>
-        <li>a lot of spatio-temporal...</li>
-        <li>using different...</li>
-        <li>GRASS GIS supports:
-            <ul>
-                <li>vector</li>
-                <li>raster</li>
-                <li>3D raster</li>
-                <li>time series</li>
-            </ul>
-        </li>
+        <li>vertical size of text or image is not limited which means that one has to keep the right ratio</li>
+        <li>there are always just two elements under the <code>section</code> element</li>
+        <li>any heading level can be used (heading element is not involved in the layout</li>
     </ul>
     <img src="img/tangible.png">
 </section>
 <section class="imgtext">
-    <h2>Comet-like visualization of water flow</h2>
-    <video width="50%" controls muted loop>
-        <source src="videos/comets-water.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <p class="caption">
-        GRASS GIS sample dataset North Carolina
+    <h2>Disadvantages of left-right template</h2>
+    <ul>
+        <li>text is pushed</li>
+        <li>to the left/right</li>
+        <li>if the lines are</li>
+        <li>short</li>
+    </ul>
+    <img src="img/tangible.png">
+</section>
+<section class="imgtext">
+    <h2>Vimeo video as <code>iframe</code></h2>
+    <h3>GRASS GIS 7: your reliable geospatial number cruncher &mdash; Markus Neteler</h3>
+    <!-- using a bit lighter green color for vimeo then for headings -->
+    <iframe src="http://player.vimeo.com/video/106874424?color=00AA00" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <p>
+        GRASS&nbsp;GIS looks
+        back to the longest development history in the FOSS4G community.
+        Having been available for 30 years, a lot of innovation has been
+        put into the new GRASS&nbsp;GIS&nbsp;7 release...
     </p>
 </section>
 <section>
-    <h2>Cost surface visualization</h2>
-    <iframe src="maps/comet-cost/index.html"
-        width="542" height="450px" seamless
-        class="rounded-corners"
-        style="display: inline; background-color: #002B36; padding: 0px; margin: 0px">
-    </iframe>
-</section>
-<section>
-    <h2>Spatio-temporal data and their visualization</h2>
-    <div class="left">Left-aligned<br>
-    <ul>
-        <li>GRASS GIS
-            <ul>
-                <li>well established</li>
-                <li>a lot of tools</li>
-                <li>our GIS platform</li>
-            </ul>
-        </li>
-    </ul></div>
+    <h2>Left-right layout with arbitrary elements</h2>
+    <div class="left">
+        <p>
+            Left
+        <ul>
+            <li>set class left for the element which should be on left</li>
+            <li>any element be used</li>
+            <li>common choice is <code>div</code> element which then contains more elements</li>
+        </ul>
+    </div>
     <div class="right">
-    <p>Right-aligned
-    <ul>
-        <li>GRASS GIS
-            <ul>
-                <li>well established</li>
-                <li>a lot of tools</li>
-                <li>our GIS platform</li>
-            </ul>
-        </li>
-        <li>GRASS GIS addons
-            <ul>
-                <li>contributed</li>
-                <li>more tools</li>
-                <li>sepecialized tools</li>
-            </ul>
-        </li>
-        
-    </ul>
+        <p>
+            Right-aligned
+        <ul>
+            <li>set class right for the element which should be on right</li>
+            <li>the right element can be the same as left one or different</li>
+            <li>text is still aligned to the left</li>
+        </ul>
     </div>
 </section>
 <section>
-    <h2>Software</h2>
-    <ul class="left">
-        <li>GRASS GIS
-            <ul>
-                <li>well established</li>
-                <li>a lot of tools</li>
-                <li>our GIS platform</li>
-            </ul>
-        </li>
-    </ul>
-    <ul class="right">
-        <li>Integration to a bigger project
-            <ul>
-                <li>tools will prevails</li>
-                <li>tools will be used</li>
-                <li>very important considering the number of tools developed<br> but never used</li>
-            </ul>
-        </li>
-    </ul>
-</section>
-<section>
+    <h2>Left-right test slide</h2>
     <div class="left" style="background-color: yellow;">class="left"</div>
     <div class="right" style="background-color: green;">class="right"</div>
 </section>
+<!--
 <section>
-    <h2>Top &ndash; bottom</h2>
+    <h2>Top-bottom test slide</h2>
     <div class="top" style="background-color: yellow;">class="top"</div>
     <div class="bottom" style="background-color: green;">class="bottom"</div>
 </section>
+-->
