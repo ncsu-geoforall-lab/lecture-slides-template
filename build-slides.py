@@ -35,7 +35,7 @@ def error_message(*objs):
 
 def main():
     parser = argparse.ArgumentParser(
-        description='Create one page from several files with individual slides and add header and footer.')
+        description='Creates one page from several files with individual slides and add header and footer.')
     parser.add_argument('files', metavar='report_directory',
                         type=str, nargs='+',
                         help='Files to be concatenated')
@@ -49,6 +49,8 @@ def main():
                         help='Description of the material (TODO)')
     parser.add_argument('--meta-author', dest='meta_author', action='store',
                         help='Author of the material (TODO)')
+    parser.add_argument('--skip-copy-std-dirs', dest='skip_copy', action='store',
+                        help='Do not copy img, audio, video, animations, maps and data directories (TODO)')
 
     args = parser.parse_args()
     outdir = args.outdir
