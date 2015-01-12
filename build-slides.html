@@ -1,0 +1,24 @@
+<section>
+    <h2>Building the presentation</h2>
+    <h3>with Python scripts</h3>
+    <pre><code data-trim class="bash">
+./copy-common-files.py --dst-dir=build
+./build-slides.py --outdir=build --title="Custom title" \
+    --meta-description="Description of the page" --meta-author="Author Name" \
+    list.html of.html files.html with.html slides.html
+    </code></pre>
+    <pre><code data-trim class="bash">
+./build-slides.py --help
+./copy-common-files.py --help
+    </code></pre>
+</section>
+<section>
+    <h2>Building the presentation</h2>
+    <h3>without Python scripts</h3>
+    <ul>
+        <li>Get <code>head.html</code> and <code>foot.html</code> files.</li>
+        <li>Paste the content of these files into one file, called e.g. <code>index.html</code>.</li>
+        <li>Edit header to change title, author and description.</li>
+        <li>Use the HTML code from the example files as a starting point for your slides.</li>
+    </ul>
+</section>

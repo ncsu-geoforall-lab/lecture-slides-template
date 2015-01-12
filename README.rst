@@ -4,7 +4,7 @@ Templates and tools for creating lecture slides
 Getting the manual
 ------------------
 
-To build the presentation slides with instructions:
+To build the presentation slides with instructions::
 
     ./build-slides.py title.html template-slides.html plain-slides.html math-slides.html build-slides.html
 
