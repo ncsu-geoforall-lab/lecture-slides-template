@@ -129,12 +129,12 @@
 
         /* classes for sections with predefined elements */
         /* classes for sections with predefined elements */
-        .right, .textimg > img, .textimg > video, .textimg > iframe, .imgtext > p, .imgtext > ul, .imgtext > ol {
+        .right, .textimg > img, .textimg > video, .textimg > iframe, .imgtext > p, .imgtext > ul, .imgtext > ol, .imgtext > div {
             float: right;
             text-align: left;
             max-width: 47%;
         }
-        .left, .imgtext > img, .imgtext > video, imgtext > iframe, .textimg > p, .textimg > ul, .textimg > ol {
+        .left, .imgtext > img, .imgtext > video, imgtext > iframe, .textimg > p, .textimg > ul, .textimg > ol, .textimg > div {
             float: left;
             text-align: left;
             max-width: 47%;
@@ -460,9 +460,8 @@
                 maxScale: 5.0,
 
                 theme: Reveal.getQueryHash().theme,  // available themes are in /css/theme
-                transition: Reveal.getQueryHash().transition || 'fade', // default/cube/page/concave/zoom/linear/fade/none
+                transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
 
-                
                 // Push each slide change to the browser history
                 history: true,
                 // Enable keyboard shortcuts for navigation
@@ -501,7 +500,7 @@
                 transitionSpeed: 'default', // default/fast/slow
 
                 // Transition style for full page slide backgrounds
-                backgroundTransition: 'default', // default/none/slide/concave/convex/zoom
+                backgroundTransition: 'none', // default/none/slide/concave/convex/zoom
 
                 // Number of slides away from the current that are visible
                 viewDistance: 3,
