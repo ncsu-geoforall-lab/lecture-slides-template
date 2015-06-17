@@ -129,20 +129,30 @@
         }
 
         /* classes for sections with predefined elements */
-        /* classes for sections with predefined elements */
+        /* using !important because, reveal styles are applied afterwards  */
         .right, .textimg > img, .textimg > video, .textimg > iframe, .imgtext > p, .imgtext > ul, .imgtext > ol, .imgtext > div {
             float: right;
             text-align: left;
-            max-width: 47%;
+            max-width: 47% !important;
         }
         .left, .imgtext > img, .imgtext > video, imgtext > iframe, .textimg > p, .textimg > ul, .textimg > ol, .textimg > div {
             float: left;
             text-align: left;
-            max-width: 47%;
+            max-width: 47% !important;
         }
         li > ul, li > ol {
             font-size: 85% !important;
             line-height: 110% !important;
+        }
+        .small {
+            font-size: smaller !important;
+            color: gray;
+            margin: 0.1em !important;
+        }
+        .credit {
+            font-size: small !important;
+            color: gray;
+            margin: 0.1em !important;
         }
         </style>
     </head>
