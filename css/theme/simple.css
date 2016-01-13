@@ -10,12 +10,24 @@
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
+
+@font-face{
+    font-family: 'Fira Sans';
+    src: url('../../lib/font/fira/FiraSans-Regular.eot');
+    src: local('Fira Sans Regular'),
+         url('../../lib/font/fira/FiraSans-Regular.eot') format('embedded-opentype'),
+         url('../../lib/font/fira/FiraSans-Regular.woff') format('woff'),
+         url('../../lib/font/fira/FiraSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
 body {
   background: #fff;
   background-color: #fff; }
 
 .reveal {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Fira Sans', 'Ubuntu', sans-serif;
   font-size: 36px;
   font-weight: normal;
   color: #000; }
@@ -35,7 +47,6 @@ body {
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
   margin: 0 0 20px 0;
   color: #000;
-  font-family: 'News Cycle', Impact, sans-serif;
   font-weight: normal;
   line-height: 1.2;
   letter-spacing: normal;
