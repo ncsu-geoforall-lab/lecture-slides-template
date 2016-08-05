@@ -10,7 +10,7 @@ remote=$(git config --get remote.origin.url)
 
 build_dir="build"
 
-rm -r $1 $build_dir
+rm -r $1 $build_dir || true
 
 git clone $remote $build_dir
 
