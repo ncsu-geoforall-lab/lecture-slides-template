@@ -178,6 +178,10 @@ body {
 .reveal dd {
   margin-left: 40px; }
 
+.reveal li {
+  margin: 10px 0;
+}
+
 .reveal q,
 .reveal blockquote {
   quotes: none; }
@@ -257,13 +261,13 @@ body {
   display: inline-block;
   font-size: smaller;
   line-height: 1.2em;
-  vertical-align: top;
+  vertical-align: bottom;
   margin: 0.1em; }
 
 .reveal small * {
-  vertical-align: top; }
+  vertical-align: bottom; }
 
-.reveal credit {
+.reveal .credit {
   font-size: small;
   color: gray;
   margin: 0.1em;
@@ -287,48 +291,48 @@ body {
 /*********************************************
  classes for sections with predefined elements
 *********************************************/
-.top {
+.reveal .top {
   /*position: relative;*/
   top: 5%;
   height: 45%; /* is the height even needed? */
 }
-.bottom {
+.reveal .bottom {
   height: 45%;
 }
-.ne {
+.reveal .ne {
   position: absolute;
   top: 5%;
   right: 5%;
   height: 45%;
   width: 45%;
  }
-.nw {
+.reveal .nw {
   position: absolute;
   top: 5%;
   left: 5%;
   height: 45%;
   width: 45%;
  }
-.se {
+.reveal .se {
   position: absolute;
   bottom: 5%;
   right: 5%;
   height: 45%;
   width: 45%;
 }
-.sw {
+.reveal .sw {
   position: absolute;
   bottom: 5%;
   left: 5%;
   height: 45%;
   width: 45%;
 }
-.right, .textimg > img, .textimg > video, .textimg > iframe, .imgtext > p, .imgtext > ul, .imgtext > ol, .imgtext > div {
+.reveal .right, .reveal .textimg > img, .reveal .textimg > video, .reveal .textimg > iframe, .reveal .imgtext > p, .reveal .imgtext > ul, .reveal .imgtext > ol, .reveal .imgtext > div {
     float: right;
     text-align: left;
     max-width: 47%;
 }
-.left, .imgtext > img, .imgtext > video, imgtext > iframe, .textimg > p, .textimg > ul, .textimg > ol, .textimg > div {
+.reveal .left, .reveal .imgtext > img, .reveal .imgtext > video, .reveal .imgtext > iframe, .reveal .textimg > p, .reveal .textimg > ul, .reveal .textimg > ol, .reveal .textimg > div {
     float: left;
     text-align: left;
     max-width: 47%;
