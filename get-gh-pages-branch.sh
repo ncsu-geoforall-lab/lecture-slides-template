@@ -1,11 +1,15 @@
+#!/bin/bash
+
+# fail on first error
+set -e
+
 remote=$(git config --get remote.origin.url)
 
 build_dir="build"
 
-rm -r $build_dir
+# attempt to remove only when exists
+# (no error message or error code if it does)
+[ ! -e file ] || rm -r $build_dir
 
-git clone $remote $build_dir
-
-cd $build_dir
-
-git checkout gh-pages
+# clone only the needed branch
+git clone -b gh-pages --single-branch $remote $build_dir
